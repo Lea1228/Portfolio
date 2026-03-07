@@ -682,6 +682,136 @@
     .exp-item { grid-template-columns: 1fr; gap: 24px; }
     footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px; }
   }
+
+/* PROJECTS INTRO */
+.projects-intro{
+  max-width:600px;
+  font-size:16px;
+  color:var(--soft);
+  margin-bottom:48px;
+  line-height:1.8;
+}
+
+/* FEATURED PROJECT */
+.featured-project{
+  grid-column: span 3;
+  padding:48px;
+  border:1px solid var(--lavender);
+  background:var(--lavender-dim);
+  margin-bottom:24px;
+}
+
+/* CARD LIFT EFFECT */
+.project-card{
+  transition: transform .25s ease;
+}
+
+.project-card:hover{
+  transform: translateY(-6px);
+}
+
+
+/* PROJECT METRICS BADGES */
+.project-metrics{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+
+.metric-badge{
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 8px;
+  border:1px solid var(--border);
+  color:var(--soft);
+}
+
+/* CASE STUDY MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.modal-content{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:40px;
+  max-width:720px;
+  width:90%;
+}
+
+.modal-close{
+  cursor:pointer;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+/* DELIVERY TIMELINE */
+.timeline{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.timeline-step{
+  border:1px solid var(--border);
+  padding:20px;
+  background:var(--surface);
+}
+
+.timeline-title{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--lavender);
+  margin-bottom:10px;
+}
+
+.timeline-desc{
+  font-size:13px;
+  color:var(--soft);
+  line-height:1.6;
+}
+
+
+/* IMPACT METRICS */
+.impact{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:80px;
+}
+
+.impact-card{
+  padding:32px;
+  border:1px solid var(--border);
+  background:var(--surface);
+}
+
+.impact-card h3{
+  font-size:40px;
+  font-family:'Fraunces', serif;
+  margin-bottom:6px;
+}
+
+.impact-card p{
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
 </style>
 </head>
 <body>
@@ -712,6 +842,33 @@
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
   </div>
+</section>
+
+<section class="section">
+<div class="section-eyebrow">Impact</div>
+<h2 class="section-title">Delivery Highlights</h2>
+
+<div class="impact">
+  <div class="impact-card">
+    <h3>6+</h3>
+    <p>Products Delivered</p>
+  </div>
+
+  <div class="impact-card">
+    <h3>3+</h3>
+    <p>Years SaaS</p>
+  </div>
+
+  <div class="impact-card">
+    <h3>10+</h3>
+    <p>Engineers Coordinated</p>
+  </div>
+
+  <div class="impact-card">
+    <h3>2</h3>
+    <p>Platforms Launched</p>
+  </div>
+</div>
 </section>
 
 <!-- STATS BAR -->
@@ -750,6 +907,7 @@
 
 <!-- PROJECTS -->
 <section class="section" id="projects">
+  <p class="projects-intro">Selected SaaS products, platforms, and cross‑functional builds I’ve led from concept to production.</p>
   <div class="section-eyebrow">01 — Featured Work</div>
   <h2 class="section-title">Managed Projects</h2>
 
@@ -903,6 +1061,48 @@
 </section>
 
 <!-- EXPERIENCE -->
+
+<section class="section">
+<div class="section-eyebrow">Product Thinking</div>
+<h2 class="section-title">How I Approach Product Delivery</h2>
+
+<div class="timeline">
+
+  <div class="timeline-step">
+    <div class="timeline-title">Prioritization</div>
+    <div class="timeline-desc">
+    Balance user value, engineering effort, and business impact
+    when defining roadmap priorities.
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-title">Agile Leadership</div>
+    <div class="timeline-desc">
+    Structure sprints, maintain backlog clarity, and keep teams
+    aligned through clear communication.
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-title">Stakeholder Alignment</div>
+    <div class="timeline-desc">
+    Translate product vision into actionable engineering tasks
+    and measurable delivery milestones.
+    </div>
+  </div>
+
+  <div class="timeline-step">
+    <div class="timeline-title">Execution</div>
+    <div class="timeline-desc">
+    Maintain delivery momentum through structured standups,
+    sprint reviews, and release planning.
+    </div>
+  </div>
+
+</div>
+</section>
+
 <section class="section" id="experience">
   <div class="section-eyebrow">02 — Career</div>
   <h2 class="section-title">Work experience</h2>
@@ -1037,6 +1237,136 @@
   *, *::before, *::after {
     transition: background-color 0.5s ease, border-color 0.5s ease, color 0.3s ease;
   }
+
+/* PROJECTS INTRO */
+.projects-intro{
+  max-width:600px;
+  font-size:16px;
+  color:var(--soft);
+  margin-bottom:48px;
+  line-height:1.8;
+}
+
+/* FEATURED PROJECT */
+.featured-project{
+  grid-column: span 3;
+  padding:48px;
+  border:1px solid var(--lavender);
+  background:var(--lavender-dim);
+  margin-bottom:24px;
+}
+
+/* CARD LIFT EFFECT */
+.project-card{
+  transition: transform .25s ease;
+}
+
+.project-card:hover{
+  transform: translateY(-6px);
+}
+
+
+/* PROJECT METRICS BADGES */
+.project-metrics{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+
+.metric-badge{
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 8px;
+  border:1px solid var(--border);
+  color:var(--soft);
+}
+
+/* CASE STUDY MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.modal-content{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:40px;
+  max-width:720px;
+  width:90%;
+}
+
+.modal-close{
+  cursor:pointer;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+/* DELIVERY TIMELINE */
+.timeline{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.timeline-step{
+  border:1px solid var(--border);
+  padding:20px;
+  background:var(--surface);
+}
+
+.timeline-title{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--lavender);
+  margin-bottom:10px;
+}
+
+.timeline-desc{
+  font-size:13px;
+  color:var(--soft);
+  line-height:1.6;
+}
+
+
+/* IMPACT METRICS */
+.impact{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:80px;
+}
+
+.impact-card{
+  padding:32px;
+  border:1px solid var(--border);
+  background:var(--surface);
+}
+
+.impact-card h3{
+  font-size:40px;
+  font-family:'Fraunces', serif;
+  margin-bottom:6px;
+}
+
+.impact-card p{
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
 </style>
 
 <script>
@@ -1075,6 +1405,30 @@
   }, { threshold: 0.08 });
 
   reveals.forEach(el => observer.observe(el));
+</script>
+
+
+<div class="modal" id="caseModal">
+  <div class="modal-content">
+    <div class="modal-close" onclick="closeModal()">Close</div>
+    <h2 style="font-family:Fraunces,serif;margin-bottom:10px;">Project Case Study</h2>
+    <p style="color:var(--soft);line-height:1.8;">
+    In this project I led sprint planning, stakeholder alignment, and delivery coordination
+    between product, design, and engineering. We launched a scalable SaaS platform while
+    reducing release blockers and improving communication between teams.
+    </p>
+  </div>
+</div>
+
+
+<script>
+function openModal(){
+ document.getElementById("caseModal").style.display="flex";
+}
+
+function closeModal(){
+ document.getElementById("caseModal").style.display="none";
+}
 </script>
 
 </body>
